@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://github.com/ruicirilo4/radio-motard/blob/main/descarregar.png?raw=true');
+            background-image: url('https://github.com/ruicirilo/Radio-Motard/blob/main/img/descarregar.png?raw=true');
             background-size: cover;
             background-position: center;
             color: white;
@@ -132,11 +132,11 @@
     <div class="container">
         <div class="main-content">
             <h1>Rádio Cidade</h1> 
-            <img id="albumCover" class="album-cover" src="https://github.com/ruicirilo4/radio-motard/blob/main/radio%20motard1.jpg?raw=true" alt="Capa do Álbum">
+            <img id="albumCover" class="album-cover" src="https://github.com/ruicirilo/Radio-Motard/blob/main/img/radio%20motard1.jpg?raw=true" alt="Capa do Álbum">
             <h2 id="songTitle">Carregando...</h2>
             <h3 id="artistName">Carregando...</h3>
             <button id="playPauseButton" onclick="togglePlayPause()">
-                <img id="playPauseIcon" src="https://github.com/ruicirilo4/Radio-Cidade/blob/main/img/play1.png?raw=true" alt="Play">
+                <img id="playPauseIcon" src="https://github.com/ruicirilo/Radio-Motard/blob/main/img/play1.png?raw=true" alt="Play">
             </button>
             <audio id="radioPlayer" src="https://sp0.redeaudio.com/8096/stream" crossorigin="anonymous"></audio>
             <div class="lyrics-frame">
@@ -192,12 +192,12 @@
         function togglePlayPause() {
             if (isPlaying) {
                 radioPlayer.pause();
-                playPauseIcon.src = 'https://github.com/ruicirilo4/Radio-Cidade/blob/main/img/play1.png?raw=true';
+                playPauseIcon.src = 'https://github.com/ruicirilo/Radio-Motard/blob/main/img/play1.png?raw=true';
             } else {
                 radioPlayer.play().catch(error => {
                     console.error("Erro ao tentar reproduzir:", error);
                 });
-                playPauseIcon.src = 'https://github.com/ruicirilo4/Radio-Cidade/blob/main/img/pause.png?raw=true';
+                playPauseIcon.src = 'https://github.com/ruicirilo/Radio-Motard/blob/main/img/pause.png?raw=true';
             }
             isPlaying = !isPlaying;
         }
@@ -235,12 +235,12 @@
                     albumCover.src = data.results[0].artworkUrl100.replace('100x100', '300x300');
                     addToHistory(artist, title, data.results[0].artworkUrl100.replace('100x100', '80x80')); 
                 } else {
-                    albumCover.src = 'https://github.com/ruicirilo4/radio-motard/blob/main/radio%20motard1.jpg?raw=true';
-                    addToHistory(artist, title, 'https://github.com/ruicirilo4/radio-motard/blob/main/radio%20motard1.jpg?raw=true');
+                    albumCover.src = 'https://github.com/ruicirilo/Radio-Motard/blob/main/img/radio%20motard1.jpg?raw=true';
+                    addToHistory(artist, title, 'https://github.com/ruicirilo/Radio-Motard/blob/main/img/radio%20motard1.jpg?raw=true');
                 }
             } catch (error) {
                 console.error('Erro ao buscar capa do álbum:', error);
-                albumCover.src = 'https://github.com/ruicirilo4/radio-motard/blob/main/radio%20motard1.jpg?raw=true';
+                albumCover.src = 'https://github.com/ruicirilo/Radio-Motard/blob/main/img/radio%20motard1.jpg?raw=true';
             }
         }
 
